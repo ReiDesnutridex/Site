@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Minha Pessoa Especial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #fce4ec;
+            color: #880e4f;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease;
+        }
+
+        p {
+            font-size: 1.2em;
+            animation: fadeIn 4s ease;
+        }
+
+        button {
+            background-color: #ad1457;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            animation: fadeIn 6s ease;
+        }
+
+        button:hover {
+            background-color: #d81b60;
+        }
+
+        #mensagemSurpresa {
+            font-size: 1.2em;
+            margin-top: 20px;
+            color: #880e4f;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Para Minha Pessoa Especial</h1>
+        <p>Você é a poesia que dá cor aos meus dias,</p>
+        <p>a melodia que embala meu coração.</p>
+        <button onclick="mostrarMensagem()">Clique aqui para uma surpresa</button>
+        <p id="mensagemSurpresa"></p>
+    </div>
+
+    <script>
+        const frases = [
+            "Eu te amo mais a cada dia! Obrigado por estar ao meu lado.",
+            "Você é a razão do meu sorriso.",
+            "Minha vida ficou mais bonita desde que te conheci.",
+            "Cada momento com você é uma memória preciosa.",
+            "Não consigo imaginar meus dias sem você.",
+            "Você ilumina minha vida de uma forma única."
+        ];
+
+        let indice = 0;
+
+        function mostrarMensagem() {
+            const mensagem = document.getElementById("mensagemSurpresa");
+            mensagem.textContent = frases[indice];
+            indice = (indice + 1) % frases.length;
+        }
+    </script>
+</body>
+</html>
